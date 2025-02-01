@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "640198231822",
+    "project_id": "custadmn-appdb",
+    "storage_bucket": "custadmn-appdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640198231822:android:99a5b33c9d0f96484d795f",
+        "android_client_info": {
+          "package_name": "com.example.adminclientapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM5LosTRzfo1aHWjMIsIaRh72xUvdauTQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

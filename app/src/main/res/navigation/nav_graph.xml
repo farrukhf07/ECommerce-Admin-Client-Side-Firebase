@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress NavigationFile -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/custLogInFragment">
+
+    <fragment
+        android:id="@+id/custLogInFragment"
+        android:name="com.example.adminclientapp.views.fragment.CustLogInFragment"
+        android:label="fragment_cust_log_in"
+        tools:layout="@layout/fragment_cust_log_in" >
+        <action
+            android:id="@+id/action_custLogInFragment_to_admnLoginFragment"
+            app:destination="@id/admnLoginFragment" />
+        <action
+            android:id="@+id/action_custLogInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_custLogInFragment_to_custDashboardFragment"
+            app:destination="@id/custDashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/custDashboardFragment"
+        android:name="com.example.adminclientapp.views.fragment.CustDashboardFragment"
+        android:label="fragment_admn_dashboard"
+        tools:layout="@layout/fragment_admn_dashboard" >
+        <action
+            android:id="@+id/action_custDashboardFragment_to_signOutFragment"
+            app:destination="@id/signOutFragment" />
+        <action
+            android:id="@+id/action_custDashboardFragment_to_placeOrderFragment"
+            app:destination="@id/placeOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/admnLoginFragment"
+        android:name="com.example.adminclientapp.views.fragment.AdmnLoginFragment"
+        android:label="fragment_admn_login"
+        tools:layout="@layout/fragment_admn_login" >
+        <action
+            android:id="@+id/action_admnLoginFragment_to_admnDashboardFragment"
+            app:destination="@id/admnDashboardFragment" />
+        <action
+            android:id="@+id/action_admnLoginFragment_to_custLogInFragment"
+            app:destination="@id/custLogInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signOutFragment"
+        android:name="com.example.adminclientapp.views.fragment.SignOutFragment"
+        android:label="fragment_sign_out"
+        tools:layout="@layout/fragment_sign_out" >
+        <action
+            android:id="@+id/action_signOutFragment_to_custLogInFragment"
+            app:destination="@id/custLogInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.adminclientapp.views.fragment.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/admnDashboardFragment"
+        android:name="com.example.adminclientapp.views.fragment.AdmnDashboardFragment"
+        android:label="AdmnDashboardFragment" >
+        <action
+            android:id="@+id/action_admnDashboardFragment_to_signOutFragment"
+            app:destination="@id/signOutFragment" />
+        <action
+            android:id="@+id/action_admnDashboardFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+        <action
+            android:id="@+id/action_admnDashboardFragment_to_updateItemFragment"
+            app:destination="@id/updateItemFragment" />
+        <action
+            android:id="@+id/action_admnDashboardFragment_to_orderHistoryFragment"
+            app:destination="@id/orderHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.example.adminclientapp.views.fragment.AddItemFragment"
+        android:label="fragment_add_item"
+        tools:layout="@layout/fragment_add_item" />
+    <fragment
+        android:id="@+id/updateItemFragment"
+        android:name="com.example.adminclientapp.views.fragment.UpdateItemFragment"
+        android:label="fragment_update_item"
+        tools:layout="@layout/fragment_update_item">
+        <argument
+            android:name="updateItem"
+            app:argType="com.example.adminclientapp.data.Item"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/placeOrderFragment"
+        android:name="com.example.adminclientapp.views.fragment.PlaceOrderFragment"
+        android:label="fragment_place_order"
+        tools:layout="@layout/fragment_place_order">
+        <argument
+            android:name="placeOrder"
+            app:argType="com.example.adminclientapp.data.Item"/>
+    </fragment>
+    <fragment
+        android:id="@+id/orderHistoryFragment"
+        android:name="com.example.adminclientapp.views.fragment.OrderHistoryFragment"
+        android:label="fragment_order_history"
+        tools:layout="@layout/fragment_order_history" />
+</navigation>
