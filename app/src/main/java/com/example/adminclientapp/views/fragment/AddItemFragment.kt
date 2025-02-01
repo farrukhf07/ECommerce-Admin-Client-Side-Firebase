@@ -21,16 +21,14 @@ class AddItemFragment : Fragment(), View.OnClickListener {
     private var _binding: FragmentAddItemBinding?= null
     private val binding get() = _binding
 
-//    private var itemRef: DatabaseReference?=null
-//    private var storageRef: StorageReference?=null
+
     private var imageUri: Uri? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-//        itemRef = FirebaseDatabase.getInstance().getReference("item_tbl")
-//        storageRef = FirebaseStorage.getInstance().getReference("Images")
+
         _binding = FragmentAddItemBinding.inflate(inflater,container,false)
         return binding?.root
     }
@@ -51,22 +49,6 @@ class AddItemFragment : Fragment(), View.OnClickListener {
         }
 
     }
-
-//    private fun uploadImageToFirebaseStorage(uri: Uri) {
-//        val storageRef = FirebaseStorage.getInstance().reference
-//        val imageRef = storageRef.child("images/${UUID.randomUUID()}")
-//
-//        imageRef.putFile(uri)
-//            .addOnSuccessListener {
-//                imageRef.downloadUrl.addOnSuccessListener { downloadUri ->
-//                    val imageUrl = downloadUri.toString()
-//                    saveItemToDatabase(imageUrl)
-//                }
-//            }
-//            .addOnFailureListener {exception ->
-//                Toast.makeText(context, "Failed to upload image: ${exception.message}", Toast.LENGTH_LONG).show()
-//            }
-//    }
 
     private fun saveItemToDatabase() {
         val random = Random.nextInt(1, 100)
